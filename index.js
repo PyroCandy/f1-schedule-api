@@ -11,6 +11,7 @@ const router = express.Router()
 
 // setup express app
 const app = express()
+app.use(express.static('assets'))
 app.use(cors())
 
 // using express to parse json data
