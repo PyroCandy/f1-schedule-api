@@ -54,6 +54,10 @@ router.get('/api/race/:race_no', async (req,res) => {
     }
 })
 
+router.get('/test', (req,res) => {
+    console.log("testing")
+})
+
 // add race
 router.post('/api', async (req, res) => {
     const race = new schedule({
@@ -106,7 +110,5 @@ app.use('/', router)
 // dynamic port for heroku
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
+    console.log(`App running on port ${ PORT }`);
 });
-
-console.log("Listening on port 3000")
